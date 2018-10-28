@@ -1,0 +1,5 @@
+<div style="display: inline-block; border: 1px solid blue; width: 50%">
+    <ul>
+        <li *ngFor="let todo of todos | async" > {{ todo.name }} --- {{todo.description}} </li>
+    </ul>
+</div>

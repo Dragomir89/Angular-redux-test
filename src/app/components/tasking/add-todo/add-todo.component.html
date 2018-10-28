@@ -1,0 +1,26 @@
+<form 
+    style="display: inline-block; border: 1px solid red; width: 45%" 
+    >
+    <div>
+        <label>Todo Name</label>
+        <input 
+            type="text"
+            name='firstInput'
+            [(ngModel)]='newTodo.name'   
+            />
+    </div>
+    <div>
+        <label>Todo Description</label>
+        <input 
+            type="text"
+            name='secondInput'
+            [(ngModel)]='newTodo.description'    
+            />
+    </div>
+    <button (click)='addTodo()' type="submit"> Add Todo</button>
+</form>
+<div>
+    <ul>
+        <!-- <li *ngFor="let todo of todos">{{ todo }}</li> -->
+    </ul>
+</div>

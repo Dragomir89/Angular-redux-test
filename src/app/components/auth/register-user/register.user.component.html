@@ -1,0 +1,64 @@
+<div>
+    <h1>Register</h1>
+    <form #registerForm='ngForm' (ngSubmit)='register()'>
+        <div>
+            <label>User Name</label>
+            <input 
+                type="text"
+                name='username'
+                [(ngModel)]='registerUserForm.username'   
+                #username='ngModel'
+                maxlength="10"
+                required
+                />
+                <div [hidden]="username.valid || username.pristine" style="color:red">username is required !</div>
+        </div>
+        <div>
+            <label>First Name</label>
+            <input 
+                type="text"
+                name='firstName'
+                [(ngModel)]='registerUserForm.firstName'   
+                #firstName='ngModel'
+                />
+        </div>
+        <div>
+            <label>Email</label>
+            <input 
+                type="text"
+                name='email'
+                [(ngModel)]='registerUserForm.email'   
+                #email='ngModel'
+                />
+        </div>
+        <div>
+            <label>Age</label>
+            <input 
+                type="text"
+                name='age'
+                [(ngModel)]='registerUserForm.age'   
+                #age='ngModel'
+                />
+        </div>
+        <div>
+            <label>Password</label>
+            <input 
+                type="text"
+                name='password'
+                [(ngModel)]='registerUserForm.password'   
+                #password='ngModel'
+                />
+        </div>
+        <div>
+            <label>Confirm Password</label>
+            <input 
+                type="text"
+                name='confirmPassword'
+                [(ngModel)]='registerUserForm.confirmPassword'   
+                #confirmPassword='ngModel'
+                />
+        </div>
+
+        <button type="submit" [disabled]="!registerForm.form.valid">Register</button>
+    </form>
+</div>
